@@ -16,7 +16,7 @@ public class ReadTxtToRequest {
 	private static WebDriver driver = null;
 	static String sCurrentLine;
     public static void main(String[] args) {
-    	    System.setProperty("webdriver.chrome.driver", "D:\\Project\\datacrawler\\Selenium\\chromedriver.exe");
+    	    System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 	        driver = new ChromeDriver();  
     	for(int j = 1; j < 10000; j++){
     		BufferedReader br = null;
@@ -26,7 +26,7 @@ public class ReadTxtToRequest {
 	    		int i =1;
 	            while ((sCurrentLine = br.readLine()) != null) {
 					driver.get(sCurrentLine);
-					Thread.sleep(5000);
+					Thread.sleep(10000);
 	            }
 	        } catch (Exception e) {
 	            e.printStackTrace();
